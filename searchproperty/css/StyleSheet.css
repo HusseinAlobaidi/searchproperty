@@ -94,3 +94,10 @@ td > input > TextBox {
         font-size: medium;
         font-weight: 400;
     }
+
+.labeleror {
+    font-family: 'DroidKufi-Regular','Amiri-Bold','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-size: large;
+    color: darkred;
+}

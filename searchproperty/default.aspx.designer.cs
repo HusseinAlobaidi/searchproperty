@@ -31,6 +31,24 @@ namespace searchproperty {
         protected global::System.Web.UI.WebControls.Label lblToday;
         
         /// <summary>
+        /// txtBookNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBookNo;
+        
+        /// <summary>
+        /// lblBookNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBookNo;
+        
+        /// <summary>
         /// txtBookDate control.
         /// </summary>
         /// <remarks>
@@ -40,31 +58,49 @@ namespace searchproperty {
         protected global::System.Web.UI.WebControls.TextBox txtBookDate;
         
         /// <summary>
-        /// TextBox2 control.
+        /// lblBookDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.Label lblBookDate;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtHereInsightOffice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtHereInsightOffice;
         
         /// <summary>
-        /// TextBox3 control.
+        /// lblHereInsightOffice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.Label lblHereInsightOffice;
+        
+        /// <summary>
+        /// txtInformedOffice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInformedOffice;
+        
+        /// <summary>
+        /// lblInformedOffice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInformedOffice;
         
         /// <summary>
         /// btnSaveMainDet control.

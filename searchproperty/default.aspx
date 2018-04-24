@@ -23,7 +23,8 @@
                             <tr>
                                 <td>رقـم الكتـاب :</td>
                                 <td>
-                                    <asp:TextBox ID="txtBookDate" runat="server" CssClass="textbox"></asp:TextBox></td>
+                                    <asp:TextBox ID="txtBookNo" runat="server" CssClass="textbox"></asp:TextBox></td>
+                                <asp:Label ID="lblBookNo" runat="server" CssClass="labeleror"></asp:Label>
                             </tr>
                         </tbody>
                     </table>
@@ -34,7 +35,8 @@
                             <tr>
                                 <td>تاريخ الكتـاب :</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox2" runat="server" CssClass="textbox"></asp:TextBox>
+                                    <asp:TextBox ID="txtBookDate" runat="server" CssClass="textbox"></asp:TextBox>
+                                    <asp:Label ID="lblBookDate" runat="server" CssClass="labeleror"></asp:Label>
                             </tr>
                         </tbody>
                     </table>
@@ -46,7 +48,8 @@
                             <tr>
                                 <td>الجهة الوارد منها الكتـاب :</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox1" runat="server" CssClass="textbox"></asp:TextBox>
+                                    <asp:TextBox ID="txtHereInsightOffice" runat="server" CssClass="textbox"></asp:TextBox>
+                                    <asp:Label ID="lblHereInsightOffice" runat="server" CssClass="labeleror"></asp:Label>
                             </tr>
                         </tbody>
                     </table>
@@ -57,7 +60,8 @@
                             <tr>
                                 <td>الجهة المستعلمة عن الكتـاب :</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox3" runat="server"  CssClass="textbox" ></asp:TextBox>
+                                    <asp:TextBox ID="txtInformedOffice" runat="server"  CssClass="textbox" ></asp:TextBox>
+                                    <asp:Label ID="lblInformedOffice" runat="server" CssClass="labeleror"></asp:Label>
                             </tr>
                         </tbody>
                     </table>
