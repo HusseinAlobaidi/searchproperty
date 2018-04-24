@@ -80,14 +80,17 @@ td > input > TextBox {
     font-size: large;
     background-color: #6e2968;
     color:white;
-    /*background: radial-gradient(cyan,yellow)*/
+    border:1px solid white;
 }
-
-.textbox {
-    height: 25px;
-    color: black;
-    text-align: center;
-    font-family: 'Amiri-Bold',Arial, sans-serif;
-    font-size: medium;
-    font-weight: 400;
-}
+    .button:hover{
+        cursor:pointer;
+        border:1px outset gray;
+    }
+    .textbox {
+        height: 25px;
+        color: black;
+        text-align: center;
+        font-family: 'Amiri-Bold',Arial, sans-serif;
+        font-size: medium;
+        font-weight: 400;
+    }
