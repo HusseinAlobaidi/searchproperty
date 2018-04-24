@@ -4,8 +4,45 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>نظام البحث عن العقارات</title>
     <link href="css/StyleSheet.css" rel="stylesheet" />
+    <script type="text/javascript" >
+        function checkEmptyFields() {
+            if (document.getElementById('<%= txtBookNo.ClientID %>').value == '') {
+                document.getElementById('<%= lblBookNo.ClientID %>').innerHTML = 'يجب ادخال رقم الكتاب';
+                document.getElementById('<%= txtBookNo.ClientID %>').focus();
+                return false;
+            }
+            else {
+                document.getElementById('<%= lblBookNo.ClientID %>').innerHTML = '';
+            }
+            if (document.getElementById('<%= txtBookDate.ClientID %>').value == '') {
+                document.getElementById('<%= lblBookDate.ClientID %>').innerHTML = 'يجب ادخال تاريخ الكتاب';
+                document.getElementById('<%= txtBookDate.ClientID %>').focus();
+                return false;
+            }
+            else {
+                document.getElementById('<%= lblBookDate.ClientID %>').innerHTML = '';
+            }
+            if (document.getElementById('<%= txtHereInsightOffice.ClientID %>').value == '') {
+                document.getElementById('<%= lblHereInsightOffice.ClientID %>').innerHTML = 'يجب ادخال الجهة الوارد منها الكتاب';
+                document.getElementById('<%= txtHereInsightOffice.ClientID %>').focus();
+                return false;
+            }
+            else {
+                document.getElementById('<%= lblHereInsightOffice.ClientID %>').innerHTML = '';
+            }
+            if (document.getElementById('<%= txtInformedOffice.ClientID %>').value == '') {
+                document.getElementById('<%= lblInformedOffice.ClientID %>').innerHTML = 'يجب ادخال المستعلمة عن الكتـاب';
+                document.getElementById('<%= txtInformedOffice.ClientID %>').focus();
+                return false;
+            }
+            else {
+                document.getElementById('<%= lblInformedOffice.ClientID %>').innerHTML = '';
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,8 +60,8 @@
                             <tr>
                                 <td>رقـم الكتـاب :</td>
                                 <td>
-                                    <asp:TextBox ID="txtBookNo" runat="server" CssClass="textbox"></asp:TextBox></td>
-                                <asp:Label ID="lblBookNo" runat="server" CssClass="labeleror"></asp:Label>
+                                    <asp:TextBox ID="txtBookNo" runat="server" CssClass="textbox"></asp:TextBox>
+                                <asp:Label ID="lblBookNo" runat="server" CssClass="labeleror"></asp:Label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -36,7 +73,7 @@
                                 <td>تاريخ الكتـاب :</td>
                                 <td>
                                     <asp:TextBox ID="txtBookDate" runat="server" CssClass="textbox"></asp:TextBox>
-                                    <asp:Label ID="lblBookDate" runat="server" CssClass="labeleror"></asp:Label>
+                                    <asp:Label ID="lblBookDate" runat="server" CssClass="labeleror"></asp:Label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -49,7 +86,7 @@
                                 <td>الجهة الوارد منها الكتـاب :</td>
                                 <td>
                                     <asp:TextBox ID="txtHereInsightOffice" runat="server" CssClass="textbox"></asp:TextBox>
-                                    <asp:Label ID="lblHereInsightOffice" runat="server" CssClass="labeleror"></asp:Label>
+                                    <asp:Label ID="lblHereInsightOffice" runat="server" CssClass="labeleror"></asp:Label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -61,7 +98,7 @@
                                 <td>الجهة المستعلمة عن الكتـاب :</td>
                                 <td>
                                     <asp:TextBox ID="txtInformedOffice" runat="server"  CssClass="textbox" ></asp:TextBox>
-                                    <asp:Label ID="lblInformedOffice" runat="server" CssClass="labeleror"></asp:Label>
+                                    <asp:Label ID="lblInformedOffice" runat="server" CssClass="labeleror"></asp:Label></td>
                             </tr>
                         </tbody>
                     </table>
@@ -73,7 +110,8 @@
                             <tr>
                                 <td></td>
                                 <td>
-                                    <asp:Button ID="btnSaveMainDet" runat="server" Text="خـــزن" CssClass="button" /></td>
+                                    <asp:Button ID="btnSaveMainDet" runat="server" Text="خـــزن" CssClass="button"
+                                         OnClientClick="return checkEmptyFields()"/></td>
                             </tr>
                         </tbody>
                     </table>
