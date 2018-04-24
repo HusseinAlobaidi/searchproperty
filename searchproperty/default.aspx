@@ -33,7 +33,7 @@
                 document.getElementById('<%= lblHereInsightOffice.ClientID %>').innerHTML = '';
             }
             if (document.getElementById('<%= txtInformedOffice.ClientID %>').value == '') {
-                document.getElementById('<%= lblInformedOffice.ClientID %>').innerHTML = 'يجب ادخال المستعلمة عن الكتـاب';
+                document.getElementById('<%= lblInformedOffice.ClientID %>').innerHTML = 'يجب ادخال الجهة المستعلمة عن الكتـاب';
                 document.getElementById('<%= txtInformedOffice.ClientID %>').focus();
                 return false;
             }
@@ -46,6 +46,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="asm" runat="server"></asp:ScriptManager>
         <main>
             <div style="min-height:25px;background-color:black;">
                 <asp:Label ID="lblToday" runat="server" ForeColor="white" Font-Size="Large"></asp:Label>
@@ -73,6 +74,7 @@
                                 <td>تاريخ الكتـاب :</td>
                                 <td>
                                     <asp:TextBox ID="txtBookDate" runat="server" CssClass="textbox"></asp:TextBox>
+                                                               
                                     <asp:Label ID="lblBookDate" runat="server" CssClass="labeleror"></asp:Label></td>
                             </tr>
                         </tbody>
