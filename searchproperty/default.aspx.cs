@@ -1,4 +1,5 @@
 ﻿using System;
+using searchproperty.DataAccess;
 
 namespace searchproperty
 {
@@ -14,7 +15,8 @@ namespace searchproperty
         {
             if (CheckFieldsValidation())
             {
-
+                ADO ado = new ADO();
+                idHiddenField.Value =ado.InsertMainDetails(txtBookNo.Text, txtBookDate.Text, txtHereInsightOffice.Text, txtInformedOffice.Text).ToString();
             }
         }
 

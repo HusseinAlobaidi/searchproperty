@@ -14,7 +14,7 @@ namespace searchproperty.DataAccess
         {
             Int32 id;
             string sql= "sp_InsertMainDetails";
-            using (SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings[""].ConnectionString))
+            using (SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["SearchProperty"].ConnectionString))
             {
                 cnn.Open();
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
@@ -24,6 +24,7 @@ namespace searchproperty.DataAccess
                     if (!string.IsNullOrEmpty(BookDate)) { cmd.Parameters.Add("@BookDate", SqlDbType.DateTime).Value = Convert.ToDateTime(BookDate); }
                     cmd.Parameters.Add("@HereInsightOffice", SqlDbType.NVarChar, 250).Value = HereInsightOffice;
                     cmd.Parameters.Add("@InformedOffice", SqlDbType.NVarChar, 250).Value = InformedOffice;
+                    cmd.Parameters.Add("@UserId", SqlDbType.UniqueIdentifier).Value = new Guid("a12a98a9-887f-498c-bbf2-006909530c88");
                     id = Convert.ToInt32( cmd.ExecuteScalar());
                 }
             }
