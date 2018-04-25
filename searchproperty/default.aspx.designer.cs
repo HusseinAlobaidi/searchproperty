@@ -31,6 +31,15 @@ namespace searchproperty {
         protected global::System.Web.UI.ScriptManager asm;
         
         /// <summary>
+        /// idHiddenField control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField idHiddenField;
+        
+        /// <summary>
         /// lblToday control.
         /// </summary>
         /// <remarks>

@@ -47,6 +47,7 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="asm" runat="server"></asp:ScriptManager>
+        <asp:HiddenField ID="idHiddenField" runat="server" />
         <main>
             <div style="min-height:25px;background-color:black;">
                 <asp:Label ID="lblToday" runat="server" ForeColor="white" Font-Size="Large"></asp:Label>
