@@ -67,6 +67,15 @@ namespace searchproperty {
         protected global::System.Web.UI.WebControls.TextBox txtBookDate;
         
         /// <summary>
+        /// cleDecisionDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender cleDecisionDate;
+        
+        /// <summary>
         /// lblBookDate control.
         /// </summary>
         /// <remarks>

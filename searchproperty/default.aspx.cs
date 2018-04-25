@@ -6,6 +6,7 @@ namespace searchproperty
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Header.DataBind();
             lblToday.Text = DateTime.Now.DayOfWeek.ToString();
         }
     }
