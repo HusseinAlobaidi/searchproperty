@@ -33,7 +33,7 @@
                 document.getElementById('<%# lblHereInsightOffice.ClientID %>').innerHTML = '';
             }
             if (document.getElementById('<%# txtInformedOffice.ClientID %>').value == '') {
-                document.getElementById('<%# lblInformedOffice.ClientID %>').innerHTML = 'يجب ادخال الجهة المستعلمة عن الكتـاب';
+                document.getElementById('<%# lblInformedOffice.ClientID %>').innerHTML = 'يجب ادخال الجهة المستعلمة عن العقار';
                 document.getElementById('<%# txtInformedOffice.ClientID %>').focus();
                 return false;
             }
@@ -99,7 +99,7 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td>الجهة المستعلمة عن الكتـاب :</td>
+                                <td>الجهة المستعلمة عن العقار :</td>
                                 <td>
                                     <asp:TextBox ID="txtInformedOffice" runat="server"  CssClass="textbox" ></asp:TextBox>
                                     <asp:Label ID="lblInformedOffice" runat="server" CssClass="labeleror"></asp:Label></td>
@@ -115,7 +115,7 @@
                                 <td></td>
                                 <td>
                                     <asp:Button ID="btnSaveMainDet" runat="server" Text="خـــزن" CssClass="button"
-                                         OnClientClick="return checkEmptyFields()"/></td>
+                                         OnClientClick="return checkEmptyFields()" OnClick="btnSaveMainDet_Click"/></td>
                             </tr>
                         </tbody>
                     </table>

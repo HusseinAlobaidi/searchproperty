@@ -9,5 +9,52 @@ namespace searchproperty
             Page.Header.DataBind();
             lblToday.Text = DateTime.Now.DayOfWeek.ToString();
         }
+
+        protected void btnSaveMainDet_Click(object sender, EventArgs e)
+        {
+            if (CheckFieldsValidation())
+            {
+
+            }
+        }
+
+        private bool CheckFieldsValidation()
+        {
+            DateTime dtBookDate;
+            if (txtBookNo.Text == string.Empty)
+            {
+                lblBookNo.Text = "يجب ادخال رقم الكتاب";
+                txtBookNo.Focus();
+                return false;
+            }
+            else if (txtBookDate.Text == string.Empty)
+            {
+                lblBookDate.Text = "يجب ادخال تاريخ الكتاب";
+                txtBookDate.Focus();
+                return false;
+            }
+            else if (!DateTime.TryParse(txtBookDate.Text, out dtBookDate))
+            {
+                lblBookDate.Text = "خطاً في التاريخ";
+                txtBookDate.Focus();
+                return false;
+            }
+            else if (txtHereInsightOffice.Text == string.Empty)
+            {
+                lblHereInsightOffice.Text = "يجب ادخال الجهة الوارد منه الكتاب";
+                txtHereInsightOffice.Focus();
+                return false;
+            }
+            else if (txtInformedOffice.Text == string.Empty)
+            {
+                lblInformedOffice.Text = "يجب ادخال الجهة المستعلمة عن العقار";
+                txtInformedOffice.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
