@@ -55,6 +55,8 @@
             <header>
                 <h1>نظام البحث عن العقارات</h1>
             </header>
+            <caption>معلومات الكتاب</caption>
+            <hr />
             <article>
                 <section>
                     <table>
