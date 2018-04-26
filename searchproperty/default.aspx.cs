@@ -16,7 +16,8 @@ namespace searchproperty
             if (CheckFieldsValidation())
             {
                 ADO ado = new ADO();
-                idHiddenField.Value =ado.InsertMainDetails(txtBookNo.Text, txtBookDate.Text, txtHereInsightOffice.Text, txtInformedOffice.Text).ToString();
+                idHiddenField.Value =ado.InsertMainDetails(txtBookNo.Text, txtBookDate.Text, txtHereInsightOffice.Text, txtInformedOffice.Text,
+                    txtPropertyNo.Text, txtDistrict.Text).ToString();
             }
         }
 
@@ -53,6 +54,12 @@ namespace searchproperty
                 txtInformedOffice.Focus();
                 return false;
             }
+            else if (txtPropertyNo.Text == string.Empty)
+            {
+                lblPropertyNo.Text = "يجب ادخال رقم القطعة";
+                txtPropertyNo.Focus();
+                return false;
+            }            
             else
             {
                 return true;

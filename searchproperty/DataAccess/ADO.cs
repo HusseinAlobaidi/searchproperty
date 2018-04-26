@@ -10,7 +10,8 @@ namespace searchproperty.DataAccess
 {
     public class ADO
     {
-        public int InsertMainDetails(string BookNo, string BookDate, string HereInsightOffice, string InformedOffice)
+        public int InsertMainDetails(string BookNo, string BookDate, string HereInsightOffice, string InformedOffice, 
+            string PropertyNo, string District)
         {
             Int32 id;
             string sql= "sp_InsertMainDetails";
@@ -25,6 +26,8 @@ namespace searchproperty.DataAccess
                     cmd.Parameters.Add("@HereInsightOffice", SqlDbType.NVarChar, 250).Value = HereInsightOffice;
                     cmd.Parameters.Add("@InformedOffice", SqlDbType.NVarChar, 250).Value = InformedOffice;
                     cmd.Parameters.Add("@UserId", SqlDbType.UniqueIdentifier).Value = new Guid("a12a98a9-887f-498c-bbf2-006909530c88");
+                    cmd.Parameters.Add("@PropertyNo", SqlDbType.NVarChar, 100).Value = PropertyNo;
+                    cmd.Parameters.Add("@DistrictNo", SqlDbType.NVarChar, 150).Value = District;
                     id = Convert.ToInt32( cmd.ExecuteScalar());
                 }
             }

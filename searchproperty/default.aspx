@@ -40,6 +40,22 @@
             else {
                 document.getElementById('<%# lblInformedOffice.ClientID %>').innerHTML = '';
             }
+            if (document.getElementById('<%# txtPropertyNo.ClientID %>').value == '') {
+                document.getElementById('<%# lblPropertyNo.ClientID %>').innerHTML = 'يجب ادخال رقم القطعة';
+                document.getElementById('<%# txtPropertyNo.ClientID %>').focus();
+                return false;
+            }
+            else {
+                document.getElementById('<%# lblPropertyNo.ClientID %>').innerHTML = '';
+            }
+            if (document.getElementById('<%# txtDistrict.ClientID %>').value == '') {
+                document.getElementById('<%# lblDistrict.ClientID %>').innerHTML = 'يجب ادخال اسم المقاطعة';
+                document.getElementById('<%# txtDistrict.ClientID %>').focus();
+                return false;
+            }
+            else {
+                document.getElementById('<%# lblDistrict.ClientID %>').innerHTML = '';
+            }
             return true;
         }
     </script>
@@ -105,6 +121,31 @@
                                 <td>
                                     <asp:TextBox ID="txtInformedOffice" runat="server"  CssClass="textbox" ></asp:TextBox>
                                     <asp:Label ID="lblInformedOffice" runat="server" CssClass="labeleror"></asp:Label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>رقم القطعة :</td>
+                                <td>
+                                    <asp:TextBox ID="txtPropertyNo" runat="server" CssClass="textbox"></asp:TextBox>
+                                    <asp:Label ID="lblPropertyNo" runat="server" CssClass="labeleror"></asp:Label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>اسم المقاطعة :</td>
+                                <td>
+                                    <asp:TextBox ID="txtDistrict" runat="server"  CssClass="textbox" ></asp:TextBox>
+                                    <asp:Label ID="lblDistrict" runat="server" CssClass="labeleror"></asp:Label></td>
                             </tr>
                         </tbody>
                     </table>
